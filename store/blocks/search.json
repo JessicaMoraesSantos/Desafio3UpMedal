@@ -1,38 +1,65 @@
 {
-    "store.orderplaced": {
+    "store.search": {
         "blocks": [
-            "order-placed"
+            "search-result-layout"
         ]
     },
-    "store.account": {
+    "search-result-layout": {
         "blocks": [
-            "my-account"
-        ],
-        "parent": {
-            "challenge": "challenge.profile"
-        }
-    },
-    "store.login": {
-        "blocks": [
-            "login-content#default"
+            "search-result-layout.desktop",
+            "search-result-layout.mobile",
+            "search-not-found-layout"
         ]
     },
-    "login-content#default": {
-        "props": {
-            "isInitialScreenOptionOnly": false,
-            "defaultOption": 1,
-            "showPasswordVerificationIntoTooltip": true
-        }
-    },
-    "product-summary.shelf": {
+    "search-result-layout.desktop": {
         "children": [
-            "product-summary-add-to-list-button",
-            "product-summary-name",
-            "product-rating-inline",
-            "product-summary-space",
-            "product-summary-price",
-            "product-identifier.summary",
-            "add-to-cart-button"
+            "breadcrumb.search",
+            "search-title.v2",
+            "flex-layout.row#total-order",
+            "search-fetch-previous",
+            "flex-layout.row#main_search",
+            "search-fetch-more"
+        ],
+        "props": {
+            "pagination": "showMore"
+        }
+    },
+    "flex-layout.row#main_search": {
+        "props": {
+            "marginTop": 6
+        },
+        "children": [
+            "flex-layout.col#left_search",
+            "flex-layout.col#right_search"
+        ]
+    },
+    "flex-layout.col#left_search": {
+        "props": {
+            "preventVerticalStretch": true
+        },
+        "children": [
+            "filter-navigator.v3"
+        ]
+    },
+    "flex-layout.col#right_search": {
+        "props": {
+            "marginLeft": 6,
+            "preventVerticalStretch": true,
+            "width": "80%"
+        },
+        "children": [
+            "search-content"
+        ]
+    },
+    "flex-layout.row#total-order": {
+        "children": [
+            "total-products.v2",
+            "order-by.v2"
+        ]
+    },
+    "search-result-layout.mobile": {
+        "children": [
+            "flex-layout.row#main_search"
         ]
     }
 }
