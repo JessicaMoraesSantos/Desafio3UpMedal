@@ -20,11 +20,12 @@ Then, access the repository's directory using your terminal.
 Once in the repository directory, it is time to edit the Minimum Boilerplate manifest.json file.
 
 Once you are in the file, you must replace the vendor and account values. vendor is the account name you are working on and account is anything you want to name your theme. For example:
-
+```
 {
   "vendor": "storecomponents",
   "name": "my-test-theme",
 }
+```
 ### Step 4 - Installing required apps
 In order to use Store Framework and work on your store theme, it is needed to have both vtex.store-sitemap and vtex.store installed.
 
